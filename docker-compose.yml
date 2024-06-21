@@ -1,0 +1,13 @@
+#* Docker Compose version
+version: "3.9"
+
+#* All services to be used will be declared
+services:
+  #* Service name
+  frontgym:
+    build: .
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/home/app
+    restart: unless-stopped
